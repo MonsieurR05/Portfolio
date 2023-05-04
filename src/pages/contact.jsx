@@ -6,7 +6,7 @@ import Layout from './../components/Layout';
 import TextAnimation from "../components/TextAnimation";
 
 
-const contact = () => {
+const ContactForm = () => {
   const [values, setValues] = useState({
     user_name: '',
     user_email: '',
@@ -78,4 +78,4 @@ const renderAlert = () => (
 
 )
 
-export default contact;
+export default ContactForm;
