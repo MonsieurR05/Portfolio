@@ -22,7 +22,7 @@ const ContactForm = () => {
       .then(response => {
         console.log('SUCCESS!', response);
         setValues({
-          user_Name: '',
+          user_name: '',
           user_email: '',
           message: ''
         });
@@ -59,8 +59,8 @@ const ContactForm = () => {
       {status && Success()}
       <form onSubmit={handleSubmit}>
         <h3 className="text-gray-700 mb-7 text-xl font-semibold">Send me a message</h3>
-        <InputField value={values.fullName} handleChange={handleChange} label="Name" name="user_name" type="text"  />
-        <InputField value={values.email} handleChange={handleChange} label="E-Mail" name="user_email" type="email"  />
+        <InputField value={values.user_name} handleChange={handleChange} label="Name" name="user_name" type="text"  />
+        <InputField value={values.user_email} handleChange={handleChange} label="E-Mail" name="user_email" type="email"  />
         <TextareaField value={values.message} handleChange={handleChange} label="Message" name="message" />
         <button type="submit"
           className="mt-4 bg-gray-900 text-gray-200 rounded px-4 py-2"
