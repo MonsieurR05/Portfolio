@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --circle-color: rgb(0, 255, 221);
+    --text-color: hsl(172, 100%, 50%);
+}
+
+.progress{
+    width: 150px;
+    height: 150px;
+}
+
+.collums{
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 48px;
+    justify-items: center;
+    position: relative;
+    top: 40px;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+}
+
+.CircularProgressbar-path {
+    stroke: var(--circle-color) !important;
+    stroke-linecap: round !important;
+}
+
+.CircularProgressbar-text {
+    fill: var(--text-color) !important;
+  }
+ 
