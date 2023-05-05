@@ -47,6 +47,10 @@ const ContactForm = () => {
     }))
   }
   return (
+     <Head>
+        <title>Rahul | Contact</title>
+        <meta name="description" contents="any description"/>
+      </Head>
     <Layout>
         <TextAnimation
             text="Contact Me!"
