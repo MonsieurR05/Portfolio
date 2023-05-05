@@ -17,7 +17,6 @@ const Footer = () => {
         </div>
         <Link
           href="/"
-          target={"_blank"}
           className="underline
             underline-offset-2
             "
