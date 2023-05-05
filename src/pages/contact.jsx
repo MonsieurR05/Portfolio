@@ -4,7 +4,7 @@ import TextareaField from "@/components/TextareaField";
 import emailjs from '@emailjs/browser';
 import Layout from "@/components/Layout";
 import TextAnimation from "@/components/TextAnimation";
-
+import Head from 'next/head';
 
 
 
@@ -47,6 +47,7 @@ const ContactForm = () => {
     }))
   }
   return (
+    <>
      <Head>
         <title>Rahul | Contact</title>
         <meta name="description" contents="any description"/>
@@ -73,6 +74,7 @@ const ContactForm = () => {
       </form>
     </div>
     </Layout>
+    </>
   )
 }
 
