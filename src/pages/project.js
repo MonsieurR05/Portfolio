@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Game from "../../public/images/projects/GameImg.png"
-import Transition from "@/components/Transition";
 import TextAnimation from "@/components/TextAnimation";
 
 
