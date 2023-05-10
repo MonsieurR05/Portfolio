@@ -115,6 +115,12 @@ const NavBar = () => {
               className=""
               toggle={handleClick}
             />
+              <CustomMobileLink
+              href="/contact"
+              title="Contact"
+              className=""
+              toggle={handleClick}
+            />
            
           </nav>
         </motion.div>
