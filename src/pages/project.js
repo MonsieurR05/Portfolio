@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 import Game from "../../public/images/projects/GameImg.png"
 import TextAnimation from "@/components/TextAnimation";
+import TransitionEffect from '@/components/Transition';
 
 
 
@@ -80,6 +81,7 @@ const projects = () => {
           name="description"
         />
       </Head>
+    <TransitionEffect/>
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout>
           <TextAnimation
