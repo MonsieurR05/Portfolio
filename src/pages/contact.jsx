@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import Layout from "@/components/Layout";
 import TextAnimation from "@/components/TextAnimation";
 import Head from 'next/head';
+import TransitionEffect from '@/components/Transition';
 
 
 
@@ -52,6 +53,7 @@ const ContactForm = () => {
         <title>Rahul | Contact</title>
         <meta name="description" contents="any description"/>
       </Head>
+    <TransitionEffect/>
     <Layout>
         <TextAnimation
             text="Contact Me!"
