@@ -5,6 +5,9 @@ import Layout from '../components/Layout';
 import TextAnimation from '../components/TextAnimation';
 import Picture from '../../public/images/profile/Rahul.png'
 import Skills from '../components/Skills';
+import TransitionEffect from '@/components/Transition';
+
+
 
 
 const about = () => {
@@ -14,6 +17,7 @@ const about = () => {
         <title>Rahul | About</title>
         <meta name="description" contents="any description"/>
       </Head>
+       <TransitionEffect/>
       <main className='flex w-full flex-col items-center justify-center'>
         <Layout className='pt-16'>
         <TextAnimation text="Creativity and Imagination!" className='mb-16 relative top-7'/>
