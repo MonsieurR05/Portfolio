@@ -16,7 +16,7 @@ export default function Home() {
       <main className='flex items-center text-light w-full min-h-screen'>
         <Layout className='pt-0 ' >
           <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="relative rounded-full w-80 h-80 flex ml-auto mr-auto mt-50 overflow-hidden sm:mb-5">
+            <div className="relative rounded-full w-80 h-80 flex ml-auto mr-auto mt-50 overflow-hidden ">
               <Image 
                 src={profilePic} 
                 alt="profile" 
@@ -29,8 +29,9 @@ export default function Home() {
               />
             </div>
             <div className='w-1/2 flex flex-col items-center self-center'>
-              <h1 className='my-1 text-5xl text-gray-500 mr-11 font-semibold font-mono sm:text-4xl relative mr-2'>Rahul &#8226; &#9794;</h1>
-              <h1 className='my-3 text-6xl text-left mr-11 font-bold sm:text-lg relative mr-2'>
+            <h1 className='my-1 text-5xl sm:text-2xl md:text-5xl text-gray-500 mr-11 font-semibold font-mono relative'>Rahul &#8226; &#9794;</h1>
+
+              <h1 className='my-3 text-4xl md:text-5xl text-left mr-11 font-bold relative sm:text-lg '>
                 <TypeWriter
                   options={{
                     strings: ['Front-End Developer', 'Back-End Developer', 'Game Developer'],
