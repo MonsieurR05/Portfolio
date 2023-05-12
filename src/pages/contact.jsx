@@ -4,7 +4,7 @@ import TextareaField from "@/components/TextareaField";
 import emailjs from '@emailjs/browser';
 import Layout from "@/components/Layout";
 import TextAnimation from "@/components/TextAnimation";
-import Head from 'next/head';
+import Head from "next/head";
 import TransitionEffect from '@/components/Transition';
 
 
@@ -49,20 +49,20 @@ const ContactForm = () => {
   }
   return (
     <>
-     <Head>
-        <title>Rahul | Contact</title>
-        <meta name="description" contents="any description"/>
-      </Head>
-    <TransitionEffect/>
+    <Head>
+      <title>Rahul | Contact</title>
+      <meta name="description" contents="any description"/>
+    </Head>
+  <TransitionEffect/>
     <Layout>
         <TextAnimation
             text="Contact Me!"
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl sm: relative top-11"
         />
 
     
             
-    <div className="lg:mt-48 lg:mr-48 pt-6 pb-8 bg-white shadow-xl rounded p-5">
+<div className="lg:mt-48 lg:mr-48 pt-6 pb-8 bg-white shadow-xl rounded p-5 sm:max-w-md sm:mx-auto">
       {status && Success()}
       <form onSubmit={handleSubmit}>
         <h3 className="text-gray-700 mb-7 text-xl font-semibold">Send me a message</h3>
