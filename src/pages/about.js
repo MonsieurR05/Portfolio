@@ -22,10 +22,10 @@ const about = () => {
         <Layout className='pt-16'>
         <TextAnimation text="Creativity and Imagination!" className='mb-16 relative top-7'/>
        
-        <div className='grid w-full grid-cols-8 gap-16'>
+        <div className='grid w-full grid-cols-8 gap-16 sm:grid-cols-2'>
             <div className='col-span-3 flex flex-col items-start justify-start'>
                 <h2 className='relative top-20 mb-4 text-lg font-bold uppercase text-light/75'>About Me</h2>
-                <p className='font-medium relative top-20 '>
+                <p className='font-medium relative top-20   '>
                   Hi, I'm Rahul, a Junior Software Developer and Game Developer whose passionately curious in programming.
                   While currently studying computer science in college, I'am always experimenting different ideas and ways
                   to make my own projects enjoyable for other users.
@@ -42,8 +42,13 @@ const about = () => {
                   given. I look forward to use my skills in the industry but also learning to new skills to become a better developer each day.
                 </p>
             </div>
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-light bg-dark p-8 top-5 left-10'>
-              <Image src={Picture} alt="me" className="w-auto h-auto rounded-2xl mr-auto ml-auto"/>
+            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-light bg-dark p-8 top-5 left-10 sm: col-span-2'>
+              <Image src={Picture} alt="me" className="w-auto h-auto rounded-2xl mr-auto ml-auto sm: relative right-5"
+              priority
+              sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      50vw"
+              />
             </div>
         </div>
         <div className='w-full border-t-2 border-solid border-light relative top-20'>
