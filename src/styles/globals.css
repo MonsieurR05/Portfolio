@@ -37,3 +37,25 @@
     fill: var(--text-color) !important;
   }
  
+ @media (max-width: 767px) {
+    .collums {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 24px;
+      top: 27px;
+    }
+  
+    .title {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+  
+    .progress__box {
+      margin: 0 auto;
+    }
+  
+    .progress {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
