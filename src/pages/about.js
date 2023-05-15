@@ -20,7 +20,7 @@ const about = () => {
        <TransitionEffect/>
       <main className='flex w-full flex-col items-center justify-center'>
         <Layout className='pt-16'>
-        <TextAnimation text="Creativity and Imagination!" className='mb-16 relative top-7'/>
+        <TextAnimation text="Creativity and Imagination!" className='mb-16 relative top-7 sm:!text-6xl xs:!text-4xl sm:mb-8'/>
        
         <div className='grid w-full grid-cols-8 gap-16 sm:grid-cols-2'>
             <div className='col-span-3 flex flex-col items-start justify-start'>
@@ -42,17 +42,17 @@ const about = () => {
                   given. I look forward to use my skills in the industry but also learning to new skills to become a better developer each day.
                 </p>
             </div>
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-light bg-dark p-8 top-5 left-10 sm: col-span-2'>
-              <Image src={Picture} alt="me" className="w-auto h-auto rounded-2xl mr-auto ml-auto sm: relative right-5"
+            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-light bg-dark p-8 top-5 left-10 sm: col-span-2 sm: mr-auto sm: mt-8'>
+              <Image src={Picture}  className="w-auto h-auto rounded-2xl mr-auto ml-auto"
               priority
               sizes="(max-width: 768px) 100vw,
                       (max-width: 1200px) 50vw,
-                      50vw"
+                      33vw"
               />
             </div>
         </div>
         <div className='w-full border-t-2 border-solid border-light relative top-20'>
-          <h1 className='text-5xl flex justify-center relative top-3 right-1'>
+          <h1 className='text-5xl flex justify-center relative top-1 right-1'>
             My Skills
           </h1>
         <div className='collums grid'>
