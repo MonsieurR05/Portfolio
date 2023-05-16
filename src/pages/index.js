@@ -40,7 +40,7 @@ export default function Home() {
                   }}
                 />
               </h1>
-              <p className='my-4 font-medium text-center text-lg sm: text-base'>
+              <p className='my-4 font-medium text-center text-lg sm: text-lg'>
                 As a Software Developer, I'm learning and experimenting to develop new ideas.
               </p>
               <p className='font-medium text-lg text-center sm: text-base'>Explore my abilities in the latest projects.</p>
