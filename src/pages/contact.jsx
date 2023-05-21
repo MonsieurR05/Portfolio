@@ -19,7 +19,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.send('service_w0v9tz4', 'template_vqdesaj', values, 'o4DidyseC-z8KvUdn')
+    emailjs.send('service_va28km3', 'template_6otp5qq', values, 'nrJi1Tv6CqinXxOQW')
       .then(response => {
         console.log('SUCCESS!', response);
         setValues({
@@ -57,7 +57,7 @@ const ContactForm = () => {
     <Layout>
         <TextAnimation
             text="Contact Me!"
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl sm: relative top-11"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl sm:relative top-10 "
         />
 
     
