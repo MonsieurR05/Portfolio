@@ -14,15 +14,10 @@ import TextAnimation from "@/components/TextAnimation";
 
 const BigProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article
-      className="w-full flex items-center justify-between relative  rounded-br-2xl
+    <article className="w-full flex items-center justify-between relative  rounded-br-2xl
         rounded-3xl border-4 border-solid border-dark  p-12 dark:bg-dark dark:border-light
-        lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
-    >
-   
-      <div
-        className="w-1/2 overflow-hidden rounded-lg lg:w-full"
-      >
+        lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+      <div className="w-1/2 overflow-hidden rounded-lg lg:w-full">
         <Image
           src={img}
           alt={title}
@@ -68,19 +63,17 @@ const BigProject = ({ type, title, summary, img, link, github }) => {
     </article>
   );
 };
-const Project = ({ title, type, img, link, github, summary}) => {
+
+
+const Project = ({ title, type, img, link, github, summary }) => {
   return (
-    <article
-      className="w-full flex flex-col items-center justify-center rounded-2xl 
-    border-4 border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light xs:p-4
-    "
-    >
-     
-        <Image
-          src={img}
-          alt={title}
-          className="w-full h-auto"
-        />
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl 
+    border-4 border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light xs:p-4">
+      <Image
+        src={img}
+        alt={title}
+        className="w-full h-auto"
+      />
      
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <span className="text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">
