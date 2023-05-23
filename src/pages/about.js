@@ -25,22 +25,23 @@ const about = () => {
         <div className='grid w-full grid-cols-8 gap-16 sm:grid-cols-2'>
             <div className='col-span-3 flex flex-col items-start justify-start'>
                 <h2 className='relative top-20 mb-4 text-lg font-bold uppercase text-light/75'>About Me</h2>
-                <p className='font-medium relative top-20   '>
-                  Hi, I'm Rahul, a Junior Software Developer and Game Developer whose passionately curious in programming.
-                  While currently studying computer science in college, I'am always experimenting different ideas and ways
-                  to make my own projects enjoyable for other users.
-                </p>
+                <p className='font-medium relative top-20'>
+  Hi, I'm Rahul, a Junior Software Developer and Game Developer who is passionately curious about programming.
+  While currently studying computer science in college, I am always experimenting with different ideas and ways
+  to make my own projects enjoyable for users.
+</p>
 
-                <p className='my-4 font-medium relative top-20'>
-                  I believe that I have a strong future in this industry as I'm always up for a challenge regardless of the difficulty 
-                  because it can be transfered into knowledge that I can save. I'm currently planning on going to university to study computer science
-                  further after I finish my 2 years in college and that will boost my experience much more.
-                </p>
+<p className='my-4 font-medium relative top-20'>
+  I believe that I have a strong future in this industry as I'm always up for a challenge, regardless of the difficulty, 
+  because it can be transformed into knowledge that I can leverage. I am currently planning on going to university to study computer science
+  further after completing my 2 years in college, which will further enhance my experience.
+</p>
 
-                <p className='font-medium relative top-20 '>
-                  Whether I'm working on a game or programming in the front-end or back-end, I bring my all to develop a functional, well-made project and to complete a task
-                  given. I look forward to use my skills in the industry but also learning to new skills to become a better developer each day.
-                </p>
+<p className='font-medium relative top-20 '>
+  Whether I'm working on a game or programming in the front-end or back-end, I give my all to develop a functional, well-made project and to complete any given task.
+  I look forward to utilizing my skills in the industry while also constantly learning new skills to become a better developer each day.
+</p>
+
             </div>
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-light bg-dark p-8 top-5 left-10 sm: col-span-2 sm: mr-auto sm: mt-8'>
               <Image src={Picture}  className="w-auto h-auto rounded-2xl mr-auto ml-auto"
