@@ -15,7 +15,7 @@ import TextAnimation from "@/components/TextAnimation";
 const BigProject = ({ type, title, summary, img, link, github }) => {
   return (
     <article className="w-full flex items-center justify-between relative  rounded-br-2xl
-        rounded-3xl border-4 border-solid border-dark  p-12 dark:bg-dark dark:border-light
+        rounded-3xl border-4 border-solid border-dark  p-12 border-light
         lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       <div className="w-1/2 overflow-hidden rounded-lg lg:w-full">
         <Image
