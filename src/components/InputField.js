@@ -1,3 +1,4 @@
+
 const InputField = ({ handleChange, label, name, type, value }) => {
     return (
       <div className="mb-5">
@@ -15,4 +16,9 @@ const InputField = ({ handleChange, label, name, type, value }) => {
   };
   
   export default InputField;
+
+
+  
+ 
+
   

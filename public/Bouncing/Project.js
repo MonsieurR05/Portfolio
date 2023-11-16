@@ -1,3 +1,4 @@
+
 "use strict";
 
 var imgElement;
@@ -185,5 +186,9 @@ xPosition5 += xSpeed5
 yPosition5 += ySpeed5
 Update5()
 })
+
+
+
+
 
 

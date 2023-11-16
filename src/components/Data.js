@@ -1,3 +1,4 @@
+
  
  export const skills = [
     {
@@ -40,4 +41,6 @@
      percentage: 55,
     },
 
+
+ 
 ]

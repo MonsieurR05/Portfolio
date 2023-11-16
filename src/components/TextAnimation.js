@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {motion} from "framer-motion"
 
@@ -54,4 +55,5 @@ const TextAnimation = ({text, className=""}) => {
   )
 }
 
-export default TextAnimation
+
+export default TextAnimation;
