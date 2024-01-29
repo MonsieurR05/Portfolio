@@ -106,13 +106,7 @@ const ContactForm = () => {
               label="Message"
               name="message"
             />
-            <button
-            
-              className="mt-4 bg-gray-900 text-gray-200 rounded px-4 py-2"
-              
-            >
-             
-            </button>
+           
           </form>
         </div>
       </Layout>
@@ -120,28 +114,7 @@ const ContactForm = () => {
   );
 };
 
-const StatusMessage = ({ status, onClose }) => {
-  let message, bgColor;
 
-  switch (status) {
-    case "SUCCESS":
-      message = "Message sent successfully!";
-      bgColor = "bg-blue-100";
-      break;
-    case "ERROR":
-      message = "Failed to send message. Please try again.";
-      bgColor = "bg-red-100";
-      break;
-    default:
-      return null;
-  }
-
-  return (
-    <div
-      className={`px-4 py-3 leading-normal text-green-700 ${bgColor} rounded mb-5 text-center`}
-    >
-      <p>{message}</p>
-    </div>
   );
 };
 
