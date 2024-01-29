@@ -107,11 +107,11 @@ const ContactForm = () => {
               name="message"
             />
             <button
-              type="submit"
+            
               className="mt-4 bg-gray-900 text-gray-200 rounded px-4 py-2"
-              disabled={isSubmitting}
+              
             >
-              {isSubmitting ? "Sending..." : "Send"}
+             
             </button>
           </form>
         </div>
