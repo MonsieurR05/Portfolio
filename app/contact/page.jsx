@@ -1,12 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import SocialLinks from "@/components/social-links"
+import { sendEmail } from "@/app/actions/send-email"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,13 +15,29 @@ export default function Contact() {
     email: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // { type: 'success' | 'error', message: string }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Add your form submission logic here
-    console.log("Form submitted:", formData)
-    alert("Thanks for reaching out! I'll get back to you soon.")
-    setFormData({ name: "", email: "", message: "" })
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    const formDataObj = new FormData()
+    formDataObj.append("name", formData.name)
+    formDataObj.append("email", formData.email)
+    formDataObj.append("message", formData.message)
+
+    const result = await sendEmail(formDataObj)
+
+    setIsSubmitting(false)
+
+    if (result.success) {
+      setSubmitStatus({ type: "success", message: "Thanks for reaching out! I'll get back to you soon." })
+      setFormData({ name: "", email: "", message: "" })
+    } else {
+      setSubmitStatus({ type: "error", message: result.error || "Failed to send message. Please try again." })
+    }
   }
 
   const handleChange = (e) => {
@@ -50,6 +67,18 @@ export default function Contact() {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {submitStatus && (
+                  <div
+                    className={`p-4 rounded-lg ${
+                      submitStatus.type === "success"
+                        ? "bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/20"
+                        : "bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </div>
+                )}
+
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-foreground">
                     Name
@@ -61,6 +90,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Your name"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -76,6 +106,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="your.email@example.com"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -91,11 +122,19 @@ export default function Contact() {
                     placeholder="Tell me about your project..."
                     rows={6}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full sm:w-auto">
-                  Send Message
+                <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </form>
             </CardContent>
@@ -116,7 +155,7 @@ export default function Contact() {
                       href="mailto:your.email@example.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      MonsieurR9@proton.me
+                      your.email@example.com
                     </a>
                   </div>
                 </div>
@@ -126,7 +165,7 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
                     <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      07365225028
+                      +1 (234) 567-890
                     </a>
                   </div>
                 </div>
@@ -135,7 +174,7 @@ export default function Contact() {
                   <MapPin className="text-primary mt-1" size={20} />
                   <div>
                     <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">Southampton</p>
+                    <p className="text-muted-foreground">San Francisco, CA</p>
                   </div>
                 </div>
               </CardContent>
