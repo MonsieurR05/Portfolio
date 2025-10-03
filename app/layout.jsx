@@ -7,10 +7,9 @@ import { Suspense } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
-  title: "Your Name - Full Stack Developer",
+  title: "Rahul Bagga - Full Stack Developer",
   description:
     "Portfolio of Your Name - Full Stack Developer specializing in React, Next.js, and modern web technologies",
-  generator: "v0.app",
 }
 
 export default function RootLayout({ children }) {
