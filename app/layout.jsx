@@ -10,6 +10,13 @@ export const metadata = {
   title: "Rahul Bagga - Full Stack Developer",
   description:
     "Portfolio of Your Name - Full Stack Developer specializing in React, Next.js, and modern web technologies",
+  icons: {
+    icon: [
+      { url: "/logo-white.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo-white.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/logo-white.png",
+  },
 }
 
 export default function RootLayout({ children }) {
