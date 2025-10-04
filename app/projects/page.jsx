@@ -20,7 +20,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <Card key={project.id} className="overflow-hidden group">
-              <div className="relative h-48 overflow-hidden bg-card">
+              <div className="relative h-48 overflow-hidden bg-background">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
@@ -53,12 +53,14 @@ export default function Projects() {
                     Code
                   </a>
                 </Button>
-                <Button asChild size="sm">
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2" size={16} />
-                    Demo
-                  </a>
-                </Button>
+                {project.demo && (
+                  <Button asChild size="sm">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2" size={16} />
+                      Demo
+                    </a>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
