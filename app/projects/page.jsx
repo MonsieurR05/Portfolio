@@ -20,12 +20,12 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <Card key={project.id} className="overflow-hidden group">
-              <div className="relative h-48 overflow-hidden bg-secondary">
+              <div className="relative h-48 overflow-hidden bg-card">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform group-hover:scale-105"
+                  className="object-contain transition-transform group-hover:scale-105"
                 />
               </div>
               <CardHeader className="space-y-2 pb-3">

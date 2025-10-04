@@ -84,8 +84,8 @@ export default function Home() {
             </div>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Year 2 BSc Computer Science student at University of the Arts London. Passionate about turning ideas into
+              reality through code, exploring new technologies, and building projects that solve real-world problems.
             </p>
           </div>
 

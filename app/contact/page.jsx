@@ -16,7 +16,7 @@ export default function Contact() {
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState(null) // { type: 'success' | 'error', message: string }
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -152,10 +152,10 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-foreground">Email</p>
                     <a
-                      href="mailto:your.email@example.com"
+                      href="mailto:MonsieurR9@proton.me"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      your.email@example.com
+                      MonsieurR9@proton.me
                     </a>
                   </div>
                 </div>
@@ -164,8 +164,8 @@ export default function Contact() {
                   <Phone className="text-primary mt-1" size={20} />
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      +1 (234) 567-890
+                    <a href="tel:07365225028" className="text-muted-foreground hover:text-primary transition-colors">
+                      07365 225028
                     </a>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export default function Contact() {
                   <MapPin className="text-primary mt-1" size={20} />
                   <div>
                     <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">Southampton</p>
                   </div>
                 </div>
               </CardContent>
