@@ -2,20 +2,21 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import Navigation from "@/components/navigation"
+import Footer from "@/components/footer"
 import "./globals.css"
 import { Suspense } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
-  title: "Rahul Bagga - Full Stack Developer",
+  title: "Your Name - Full Stack Developer",
   description:
     "Portfolio of Your Name - Full Stack Developer specializing in React, Next.js, and modern web technologies",
   icons: {
     icon: [
-      { url: "/logo-white.png", sizes: "32x32", type: "image/png" },
-      { url: "/logo-white.png", sizes: "16x16", type: "image/png" },
+      { url: "/logo-black.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo-black.png", sizes: "16x16", type: "image/png" },
     ],
-    apple: "/logo-white.png",
+    apple: "/logo-black.png",
   },
 }
 
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           <Suspense fallback={<div>Loading...</div>}>
             <Navigation />
             <main className="pt-16 md:pt-20">{children}</main>
+            <Footer />
           </Suspense>
           <Analytics />
         </ThemeProvider>

@@ -1,6 +1,6 @@
 import SocialLinks from "@/components/social-links"
 import { Card } from "@/components/ui/card"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, GraduationCap, Award, Code2 } from "lucide-react"
 
 export default function About() {
   const techStack = {
@@ -16,7 +16,7 @@ export default function About() {
     {
       degree: "BSc Computer Science",
       institution: "University of the Arts London",
-      period: "2024 - Present",
+      period: "2023 - Present",
       status: "Year 2",
       description:
         "Studying computer science with a focus on creative technology and digital innovation. Engaging in hands-on projects spanning web development, game design, IoT systems, and data visualization.",
@@ -25,19 +25,24 @@ export default function About() {
 
   return (
     <div className="min-h-screen py-20 px-4 md:px-8 md:pl-32">
-      <div className="max-w-4xl mx-auto space-y-16">
+      <div className="max-w-4xl mx-auto space-y-20">
         {/* Header */}
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground">About Me</h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+        <div className="space-y-6">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            About Me
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
             A computer science student passionate about building innovative digital experiences.
           </p>
         </div>
 
         {/* Bio */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-foreground">Background</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
+        <div className="space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-1 h-8 bg-primary rounded-full" />
+            <h2 className="text-3xl font-bold text-foreground">Background</h2>
+          </div>
+          <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
             <p>
               I'm currently in my second year studying Computer Science at University of the Arts London, where I'm
               exploring the intersection of technology and creativity. My journey in tech has been driven by curiosity
@@ -58,50 +63,58 @@ export default function About() {
 
         {/* Education */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-semibold text-foreground">Education</h2>
-          <div className="space-y-8">
+          <div className="flex items-center gap-3">
+            <GraduationCap className="w-8 h-8 text-primary" />
+            <h2 className="text-3xl font-bold text-foreground">Education</h2>
+          </div>
+          <Card className="p-8 bg-gradient-to-br from-card to-card/50 border-2 border-primary/20 hover:border-primary/40 transition-all shadow-lg">
             {education.map((edu, index) => (
-              <div key={index} className="space-y-2">
+              <div key={index} className="space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                  <h3 className="text-lg font-semibold text-foreground">{edu.degree}</h3>
-                  <span className="text-sm text-muted-foreground">{edu.period}</span>
+                  <h3 className="text-2xl font-bold text-foreground">{edu.degree}</h3>
+                  <span className="text-base text-muted-foreground font-medium">{edu.period}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <p className="text-primary font-medium">{edu.institution}</p>
-                  <span className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium">
+                  <p className="text-xl text-primary font-semibold">{edu.institution}</p>
+                  <span className="px-3 py-1.5 bg-primary text-primary-foreground rounded-lg text-sm font-bold">
                     {edu.status}
                   </span>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">{edu.description}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{edu.description}</p>
               </div>
             ))}
-          </div>
+          </Card>
         </div>
 
         {/* Achievements */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-semibold text-foreground">Achievements</h2>
-          <Card className="p-6 bg-card border-border hover:border-primary/50 transition-colors">
-            <div className="space-y-3">
+          <div className="flex items-center gap-3">
+            <Award className="w-8 h-8 text-primary" />
+            <h2 className="text-3xl font-bold text-foreground">Achievements</h2>
+          </div>
+          <Card className="p-8 bg-gradient-to-br from-primary/5 to-card border-2 border-primary/30 hover:border-primary/50 transition-all shadow-lg">
+            <div className="space-y-4">
               <div className="flex items-start justify-between gap-4">
-                <div className="space-y-2 flex-1">
-                  <h3 className="text-lg font-semibold text-foreground">
+                <div className="space-y-3 flex-1">
+                  <h3 className="text-2xl font-bold text-foreground leading-tight">
                     Decolonizing Computer Science: The Immersive Elevator Experience
                   </h3>
-                  <p className="text-muted-foreground">Co-authored ACM research publication</p>
+                  <p className="text-lg text-muted-foreground font-medium">Co-authored ACM research publication</p>
                 </div>
                 <a
                   href="https://dl.acm.org/doi/10.1145/3698061.3733978"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+                  className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-base font-semibold shrink-0"
                 >
                   View Publication
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-5 h-5" />
                 </a>
               </div>
               <div className="pt-2">
-                <span className="px-3 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium">Research</span>
+                <span className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-bold">
+                  Research
+                </span>
               </div>
             </div>
           </Card>
@@ -109,10 +122,13 @@ export default function About() {
 
         {/* Tech Stack */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-semibold text-foreground">Tech Stack</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Card className="p-5 space-y-3 bg-card border-border hover:border-primary/50 transition-colors">
-              <h3 className="text-lg font-semibold text-primary">Frontend</h3>
+          <div className="flex items-center gap-3">
+            <Code2 className="w-8 h-8 text-primary" />
+            <h2 className="text-3xl font-bold text-foreground">Tech Stack</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+              <h3 className="text-xl font-bold text-primary">Frontend</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.frontend.map((tech) => (
                   <span
@@ -125,8 +141,8 @@ export default function About() {
               </div>
             </Card>
 
-            <Card className="p-5 space-y-3 bg-card border-border hover:border-primary/50 transition-colors">
-              <h3 className="text-lg font-semibold text-primary">Backend & Database</h3>
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+              <h3 className="text-xl font-bold text-primary">Backend & Database</h3>
               <div className="flex flex-wrap gap-2">
                 {[...techStack.backend, ...techStack.database].map((tech) => (
                   <span
@@ -139,8 +155,8 @@ export default function About() {
               </div>
             </Card>
 
-            <Card className="p-5 space-y-3 bg-card border-border hover:border-primary/50 transition-colors">
-              <h3 className="text-lg font-semibold text-primary">Game Development</h3>
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+              <h3 className="text-xl font-bold text-primary">Game Development</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.gameDev.map((tech) => (
                   <span
@@ -153,8 +169,8 @@ export default function About() {
               </div>
             </Card>
 
-            <Card className="p-5 space-y-3 bg-card border-border hover:border-primary/50 transition-colors">
-              <h3 className="text-lg font-semibold text-primary">Hardware & IoT</h3>
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+              <h3 className="text-xl font-bold text-primary">Hardware & IoT</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.hardware.map((tech) => (
                   <span
@@ -167,8 +183,8 @@ export default function About() {
               </div>
             </Card>
 
-            <Card className="p-5 space-y-3 bg-card border-border hover:border-primary/50 transition-colors">
-              <h3 className="text-lg font-semibold text-primary">Tools & Platforms</h3>
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+              <h3 className="text-xl font-bold text-primary">Tools & Platforms</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.tools.map((tech) => (
                   <span
@@ -184,9 +200,12 @@ export default function About() {
         </div>
 
         {/* Contact CTA */}
-        <div className="pt-8 space-y-4">
-          <h2 className="text-2xl font-semibold text-foreground">Let's Connect</h2>
-          <p className="text-muted-foreground">
+        <div className="pt-8 space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-1 h-8 bg-primary rounded-full" />
+            <h2 className="text-3xl font-bold text-foreground">Let's Connect</h2>
+          </div>
+          <p className="text-xl text-muted-foreground">
             I'm always interested in hearing about new projects and opportunities.
           </p>
           <SocialLinks />

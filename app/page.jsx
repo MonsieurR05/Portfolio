@@ -33,7 +33,7 @@ export default function Home() {
   const CurrentIcon = roles[currentRoleIndex].icon
 
   return (
-    <div className="min-h-screen flex items-start justify-center px-4 md:px-8 pt-16 pb-16 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-16 pb-16 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="gradient-mesh" />
       </div>
@@ -107,7 +107,7 @@ export default function Home() {
 
           <div
             className={`pt-8 flex justify-center transition-all duration-700 delay-300 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
             <SocialLinks />
