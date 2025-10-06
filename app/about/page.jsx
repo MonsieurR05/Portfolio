@@ -27,26 +27,27 @@ export default function About() {
     <div className="min-h-screen py-20 px-4 md:px-8 md:pl-32">
       <div className="max-w-4xl mx-auto space-y-20">
         {/* Header */}
-        <div className="space-y-6">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent text-center">
             About Me
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            A computer science student passionate about building innovative digital experiences.
+            A computer science student specializing in software development, passionate about building innovative
+            digital experiences.
           </p>
         </div>
 
         {/* Bio */}
-        <div className="space-y-6">
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
           <div className="flex items-center gap-3">
             <div className="w-1 h-8 bg-primary rounded-full" />
             <h2 className="text-3xl font-bold text-foreground">Background</h2>
           </div>
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
             <p>
-              I'm currently in my second year studying Computer Science at University of the Arts London, where I'm
-              exploring the intersection of technology and creativity. My journey in tech has been driven by curiosity
-              and a desire to build projects that solve real-world problems.
+              I'm currently in my second year studying Computer Science at University of the Arts London, specializing
+              in software development. My journey in tech has been driven by curiosity and a desire to build projects
+              that solve real-world problems.
             </p>
             <p>
               From developing IoT systems and game development to building full-stack web applications and data
@@ -62,12 +63,12 @@ export default function About() {
         </div>
 
         {/* Education */}
-        <div className="space-y-6">
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
           <div className="flex items-center gap-3">
             <GraduationCap className="w-8 h-8 text-primary" />
             <h2 className="text-3xl font-bold text-foreground">Education</h2>
           </div>
-          <Card className="p-8 bg-gradient-to-br from-card to-card/50 border-2 border-primary/20 hover:border-primary/40 transition-all shadow-lg">
+          <Card className="p-8 bg-gradient-to-br from-card to-card/50 border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
             {education.map((edu, index) => (
               <div key={index} className="space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -87,12 +88,12 @@ export default function About() {
         </div>
 
         {/* Achievements */}
-        <div className="space-y-6">
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
           <div className="flex items-center gap-3">
             <Award className="w-8 h-8 text-primary" />
             <h2 className="text-3xl font-bold text-foreground">Achievements</h2>
           </div>
-          <Card className="p-8 bg-gradient-to-br from-primary/5 to-card border-2 border-primary/30 hover:border-primary/50 transition-all shadow-lg">
+          <Card className="p-8 bg-gradient-to-br from-primary/5 to-card border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
             <div className="space-y-4">
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-3 flex-1">
@@ -121,19 +122,19 @@ export default function About() {
         </div>
 
         {/* Tech Stack */}
-        <div className="space-y-6">
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
           <div className="flex items-center gap-3">
             <Code2 className="w-8 h-8 text-primary" />
             <h2 className="text-3xl font-bold text-foreground">Tech Stack</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <h3 className="text-xl font-bold text-primary">Frontend</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.frontend.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium"
+                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium hover:bg-secondary hover:scale-105 transition-all duration-200 cursor-default"
                   >
                     {tech}
                   </span>
@@ -141,13 +142,13 @@ export default function About() {
               </div>
             </Card>
 
-            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <h3 className="text-xl font-bold text-primary">Backend & Database</h3>
               <div className="flex flex-wrap gap-2">
                 {[...techStack.backend, ...techStack.database].map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium"
+                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium hover:bg-secondary hover:scale-105 transition-all duration-200 cursor-default"
                   >
                     {tech}
                   </span>
@@ -155,13 +156,13 @@ export default function About() {
               </div>
             </Card>
 
-            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <h3 className="text-xl font-bold text-primary">Game Development</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.gameDev.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium"
+                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium hover:bg-secondary hover:scale-105 transition-all duration-200 cursor-default"
                   >
                     {tech}
                   </span>
@@ -169,13 +170,13 @@ export default function About() {
               </div>
             </Card>
 
-            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <h3 className="text-xl font-bold text-primary">Hardware & IoT</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.hardware.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium"
+                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium hover:bg-secondary hover:scale-105 transition-all duration-200 cursor-default"
                   >
                     {tech}
                   </span>
@@ -183,13 +184,13 @@ export default function About() {
               </div>
             </Card>
 
-            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-colors">
+            <Card className="p-6 space-y-4 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <h3 className="text-xl font-bold text-primary">Tools & Platforms</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.tools.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium"
+                    className="px-3 py-1 bg-secondary/50 text-secondary-foreground rounded-md text-xs font-medium hover:bg-secondary hover:scale-105 transition-all duration-200 cursor-default"
                   >
                     {tech}
                   </span>
@@ -200,7 +201,7 @@ export default function About() {
         </div>
 
         {/* Contact CTA */}
-        <div className="pt-8 space-y-6">
+        <div className="pt-8 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-1000">
           <div className="flex items-center gap-3">
             <div className="w-1 h-8 bg-primary rounded-full" />
             <h2 className="text-3xl font-bold text-foreground">Let's Connect</h2>

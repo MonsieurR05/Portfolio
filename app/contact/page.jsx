@@ -51,16 +51,13 @@ export default function Contact() {
     <div className="min-h-screen py-20 px-4 md:px-8 md:pl-32">
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Header */}
-        <div className="space-y-4">
+        <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground">Get In Touch</h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Have a project in mind or just want to chat? Feel free to reach out!
-          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Form */}
-          <Card className="lg:col-span-2">
+          <Card className="lg:col-span-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
             <CardHeader>
               <CardTitle>Send a Message</CardTitle>
               <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
@@ -91,6 +88,7 @@ export default function Contact() {
                     placeholder="Your name"
                     required
                     disabled={isSubmitting}
+                    className="transition-all duration-200 focus:scale-[1.01]"
                   />
                 </div>
 
@@ -107,6 +105,7 @@ export default function Contact() {
                     placeholder="your.email@example.com"
                     required
                     disabled={isSubmitting}
+                    className="transition-all duration-200 focus:scale-[1.01]"
                   />
                 </div>
 
@@ -123,10 +122,16 @@ export default function Contact() {
                     rows={6}
                     required
                     disabled={isSubmitting}
+                    className="transition-all duration-200 focus:scale-[1.01]"
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={isSubmitting}>
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full sm:w-auto hover:scale-105 transition-transform duration-200"
+                  disabled={isSubmitting}
+                >
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -141,8 +146,8 @@ export default function Contact() {
           </Card>
 
           {/* Contact Info */}
-          <div className="space-y-6">
-            <Card>
+          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <Card className="hover:-translate-y-1 transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
               </CardHeader>
@@ -180,7 +185,7 @@ export default function Contact() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:-translate-y-1 transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <CardTitle>Social Links</CardTitle>
               </CardHeader>
