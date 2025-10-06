@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowRight, Code2, Sparkles, Server, Gamepad2, Cpu, Layers } from "lucide-react"
+import { ArrowRight, Code2, Server, Gamepad2, Cpu, Layers } from "lucide-react"
 import SocialLinks from "@/components/social-links"
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
@@ -17,6 +17,12 @@ export default function Home() {
     { title: "Games Dev", icon: Gamepad2 },
     { title: "IoT Dev", icon: Cpu },
   ]
+
+  const techStack = {
+    frontend: ["React", "Next.js", "Astro", "Tailwind CSS", "JavaScript", "HTML/CSS"],
+    backend: ["Python", "Flask", "REST API", "Node.js"],
+    other: ["Unity", "C#", "Arduino", "C++", "SQLite", "Git"],
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -38,25 +44,12 @@ export default function Home() {
         <div className="gradient-mesh" />
       </div>
 
-      <div className="max-w-4xl w-full mx-auto text-center relative z-10">
+      <div className="max-w-4xl w-full mx-auto text-center">
         <div className="space-y-8">
-          <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 transition-all duration-700 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-            }`}
-          >
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Available for new opportunities</span>
-          </div>
-
-          <div
-            className={`space-y-6 transition-all duration-700 delay-100 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-            }`}
-          >
+          <div className={`space-y-6 transition-opacity duration-700 ${mounted ? "opacity-100" : "opacity-0"}`}>
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[1.2] tracking-tight overflow-visible pb-4">
-                <span className="block text-muted-foreground/60">Hi, I'm</span>
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[1.1] tracking-tight overflow-visible pb-4">
+                <span className="block text-muted-foreground/60 text-4xl md:text-5xl lg:text-6xl mb-2">Hi, I'm</span>
                 <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
                   Rahul Bagga
                 </span>
@@ -76,7 +69,7 @@ export default function Home() {
                       }`}
                     >
                       <Icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
-                      <p className="font-medium">{role.title}</p>
+                      <p className="font-semibold">{role.title}</p>
                     </div>
                   )
                 })}
@@ -89,11 +82,52 @@ export default function Home() {
             </p>
           </div>
 
-          <div
-            className={`flex flex-col sm:flex-row gap-4 pt-4 justify-center transition-all duration-700 delay-200 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-            }`}
-          >
+          <div className="pt-6">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-foreground">Technologies</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-3xl mx-auto">
+              <div className="bg-card border border-border rounded-lg p-3 hover:border-primary transition-colors">
+                <h3 className="text-sm font-semibold text-primary mb-2">Frontend</h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {techStack.frontend.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 bg-background border border-border rounded text-xs font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-3 hover:border-primary transition-colors">
+                <h3 className="text-sm font-semibold text-primary mb-2">Backend</h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {techStack.backend.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 bg-background border border-border rounded text-xs font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-3 hover:border-primary transition-colors">
+                <h3 className="text-sm font-semibold text-primary mb-2">Other</h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {techStack.other.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 bg-background border border-border rounded text-xs font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
             <Button asChild size="lg" className="group text-base">
               <Link href="/projects">
                 View My Work
@@ -105,11 +139,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div
-            className={`pt-8 flex justify-center transition-all duration-700 delay-300 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
-          >
+          <div className="pt-8 flex justify-center">
             <SocialLinks />
           </div>
         </div>
