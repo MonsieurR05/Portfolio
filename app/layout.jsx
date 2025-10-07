@@ -8,15 +8,15 @@ import { Suspense } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
-  title: "Your Name - Full Stack Developer",
+  title: "Rahul Bagga - Software Engineer",
   description:
     "Portfolio of Your Name - Full Stack Developer specializing in React, Next.js, and modern web technologies",
   icons: {
     icon: [
-      { url: "/logo-black.png", sizes: "32x32", type: "image/png" },
-      { url: "/logo-black.png", sizes: "16x16", type: "image/png" },
+      { url: "/logo-white.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo-white.png", sizes: "16x16", type: "image/png" },
     ],
-    apple: "/logo-black.png",
+    apple: "/logo-white.png",
   },
 }
 
