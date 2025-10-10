@@ -16,7 +16,7 @@ export default function About() {
     {
       degree: "BSc Computer Science",
       institution: "University of the Arts London",
-      period: "2023 - Present",
+      period: "2024 - Present",
       status: "Year 2",
       description:
         "Studying computer science with a focus on creative technology and digital innovation. Engaging in hands-on projects spanning web development, game design, IoT systems, and data visualization.",
